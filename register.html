@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title>Register-page</title>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.js" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script type="text/javascript" src="js/script.js"></script>
+ <link rel="stylesheet" href="css/style1.css" type="text/css" />
+ </head>
+ <body>
+ 
+  <div class="content">
+    <div class="container register-page">
+      <div class="padding-class">
+        <div class="row main">
+          <form id="register_form" class="regi_form" method="post" name="formname" role="form">     
+            <center><h1>Registration Form</h1></center>
+             <div class="col-sm-12 col-md-12">
+              <div class="errors">
+                <div class="alert alert-success alert-dismissable" role="alert" id="message">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                    <strong id="message_type"></strong>
+                </div>
+              </div>
+        </div>
+            <div class="main-register main-center">
+              <div class="form-group">
+                <label for="first_name" class="col-sm-6 control-label">User Name <font color="red">*</font></label>
+                <div class="col-sm-12">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fas fa-user"></i></span>           
+                    <input type="text" id="first_name" class="form-control" name="name" placeholder="Enter your first name" required />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                  <label for="form_phone" class="col-sm-6 control-label">Designation <font color="red">*</font></label>
+                  <div class="col-sm-12">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fas fa-user-graduate"></i></span>
+                          <select name="degree" id="degree" class="form-control" required>
+                              <option value="" selected="selected">--select Degree--</option>
+                              <option value="mca">MCA</option>
+                              <option value="be/btech">BE/ B.TECH</option>
+                              <option value="b.a">B.A</option>
+                              <option value="b.com">B.COM</option>
+                              <option value="b.sc">B.Sc</option>
+                              <option value="b.ed">B.Ed</option>
+                              <option value="m.e/m.tech">M.E/M.TECH</option>
+                              <option value="m.b.b.s">M.B.B.S</option>
+                              <option value="IAS">IAS</option>
+                              <option value="phd">PHD</option>
+                          </select>
+                    </div>        
+              	  </div>
+              </div>
+              <div class="form-group">
+                  <label class="col-sm-6 control-label">Gender <font color="red">*</font></label>
+                  <div class="col-sm-12">
+                      <div class="row-inline">                
+                          <div class="col-sm-4">
+                              <label class="radio-inline">
+                                  <input type="radio" name="gender" id="maleRadio" value="Male" selected="selected">Male
+                              </label>
+                          </div>
+                          <div class="col-sm-4">
+                              <label class="radio-inline">
+                                <input type="radio" name="gender" id="femaleRadio" value="Female">Female
+                              </label>
+                          </div>
+                          <div class="col-sm-4">
+                              <label class="radio-inline">
+                                <input type="radio" name="gender" id="otherRadio" value="Others">Others
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="form_phone" class="col-sm-6 control-label">Phone No <font color="red">*</font></label>
+                  <div class="col-sm-12">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fas fa-mobile"></i></span>
+                      <input type="tel" id="form_phone" class="form-control" name="phone" placeholder="Please enter your phone" required="required" pattern="[6-9]{1}[0-9]{9}" required />
+                    </div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="form_mail" class="col-md-6 control-label">Email <font color="red">*</font></label>
+                  <div class="col-sm-12">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <input type="email" id="form_mail" class="form-control" name="email" placeholder="Your Email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required />
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group">
+                 <label for="form_aadhar" class="col-sm-6 control-label">Password</label>
+                 <div class="col-sm-12">
+                 	<div class="input-group">
+                 		<span class="input-group-addon"><i class="fas fa-key"></i></span>
+                 		<input type="password" id="form_pass" class="form-control" maxLength="20" name="password" placeholder="Enter your password" required>
+                 	</div>
+                 </div>
+              </div>           
+              <div class="form-group">
+                <label for="form_aadhar" class="col-sm-6 control-label">Re-enter Password</label>
+                <div class="col-sm-12">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fas fa-key"></i></span>                    
+                    <input type="password" id="form_re_pass" class="form-control" maxLength="20" name="re_password" placeholder="Re-enter your password" required>
+                  </div>
+                  <span class="alert_message"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-md-9 col-sm-offset-3">
+                    <ul class="list-unstyled list-block">
+                      <li><button type="button" class="btn btn-danger register-reset-button">Reset</button></li>
+                      <li><button type="submit" id="student_register" name="btn-signup" class="btn btn-success btn-block register-button">Register <i class="fa fa-paper-plane" aria-hidden="true"></i></button></li>
+                    </ul>
+                  </div>
+              </div>
+              <div class="register_link">
+                <a href="index.html" target="_blank">Already have account? signin here!</a>
+              </div>
+            </div>
+          </form> 
+        </div>
+       
+      </div>   
+    </div>
+  </div>
+  <script>
+  
+  </script>
+</body>
+</html>
